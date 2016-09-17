@@ -5,17 +5,17 @@ var
     a:Mang2Chieu;
     m,n,i,j:integer;
 begin
-    writeln('Dong: ');readln(m);
-    writeln('Cot: ');readln(n);
+    write('Dong: ');readln(m);
+    write('Cot: ');readln(n);
     for i:=1 to m do
         for j:=1 to n do
         begin
-            write('a[',i,',',j,']');readln(a[i,j]);
+            write('a[',i,',',j,']:=');readln(a[i,j]);
         end;
     for i:=1 to m do
     begin
         for j:=1 to n do
-            writeln(a[i,j]:4);
+            write(a[i,j]:4);
         writeln;
     end;
     readln;
