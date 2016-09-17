@@ -11,24 +11,27 @@ uses crt;
 // Bài 3
 // Kiểm tra ma trận thưa
 
+// Bài 4
+// Kiểm tra 2 hàng giống nhau. Tính tổng hàng đó.
+
 type Mang2Chieu=array[1..10,1..10]of integer;
 var
     a,b:Mang2Chieu;
     m,n,i,j,s,max,x,c:integer;
+    bool:boolean;
 begin
     max:=-32768;
     write('Dong: ');readln(m);
     write('Cot: ');readln(n);
 //  write('x:=');readln(x);
-    c:=0;
-//  s:=0;
+//  c:=0;
     for i:=1 to m do
 //  begin
 //      max:=-32768;
         for j:=1 to n do
         begin
             write('a[',i,',',j,']:=');readln(a[i,j]);
-            if a[i,j]=0 then inc(c);
+//          if a[i,j]=0 then inc(c);
 //          if a[i,j]>max then max:=a[i,j];
 //          if a[i,j]=x then inc(c);
         end;
@@ -55,6 +58,24 @@ begin
 //          write(b[i,j]:4);
 //      writeln;
 //  end;
-    if c>=m*n/2 then write('Ma Tran Thua');
+//  if c>=m*n/2 then write('Ma Tran Thua');
+//  readln;
+    for i:=1 to m do
+    begin
+        bool:=True;
+        s:=0;
+        for j:=i+1 to m do
+        begin
+            for x:=1 to n do
+                if a[i,x]<>a[j,x] then bool:=False;  
+            if bool=True then
+            begin
+                writeln(i,'-',j);
+                for x:=1 to n do
+                    s:=s+a[i,x];
+                writeln('S:=',s);
+            end;
+        end;
+    end;
     readln;
 end.
