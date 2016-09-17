@@ -16,31 +16,30 @@ begin
     max:=-32768;
     write('Dong: ');readln(m);
     write('Cot: ');readln(n);
-    write('x:=');readln(x);
-    c:=0;s:=0;
+//  write('x:=');readln(x);
+//  c:=0;s:=0;
     for i:=1 to m do
-    begin
-        max:=-32768;
+//  begin
+//      max:=-32768;
         for j:=1 to n do
         begin
             write('a[',i,',',j,']:=');readln(a[i,j]);
-            if a[i,j]>max then max:=a[i,j];
-            if a[i,j]=x then inc(c);
+//          if a[i,j]>max then max:=a[i,j];
+//          if a[i,j]=x then inc(c);
         end;
-        s:=s+max;
-    end;
+//      s:=s+max;
+//  end;
     for i:=1 to m do
     begin
         for j:=1 to n do
             write(a[i,j]:4);
         writeln;
     end;
-    writeln('a/ Tong cac phan tu lon nhat cua moi dong:',s);
-    writeln('b/ So lan xuat hien x trong mang:',c);
-    for i:=1 to m do
-        for j:=1 to n do
-            if a[i,j]=x then write('[',i,',',j,']');
-    readln;
+//  writeln('a/ Tong cac phan tu lon nhat cua moi dong:',s);
+//  writeln('b/ So lan xuat hien x trong mang:',c);
+//  for i:=1 to m do
+//      for j:=1 to n do
+//          if a[i,j]=x then write('[',i,',',j,']');
     for i:=1 to m do
         for j:=1 to n do
             b[j,i]:=a[i,j];
