@@ -8,7 +8,7 @@ uses crt;
 type Mang2Chieu=array[1..10,1..10]of integer;
 var
     a:Mang2Chieu;
-    m,n,i,j,s,k,x,c:integer;
+    m,n,i,j,s,max,x,c:integer;
 begin
     k:=-32768;
     write('Dong: ');readln(m);
@@ -17,14 +17,14 @@ begin
     c:=0;s:=0;
     for i:=1 to m do
     begin
-        k:=-32768;
+        max:=-32768;
         for j:=1 to n do
         begin
             write('a[',i,',',j,']:=');readln(a[i,j]);
-            if a[i,j]>k then k:=a[i,j];
+            if a[i,j]>max then max:=a[i,j];
             if a[i,j]=x then inc(c);
         end;
-        s:=s+k;
+        s:=s+max;
     end;
     for i:=1 to m do
     begin
