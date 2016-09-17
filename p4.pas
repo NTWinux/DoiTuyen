@@ -8,6 +8,9 @@ uses crt;
 // Bài 2
 // Tìm ma trận chuyển vị
 
+// Bài 3
+// Kiểm tra ma trận thưa
+
 type Mang2Chieu=array[1..10,1..10]of integer;
 var
     a,b:Mang2Chieu;
@@ -17,13 +20,15 @@ begin
     write('Dong: ');readln(m);
     write('Cot: ');readln(n);
 //  write('x:=');readln(x);
-//  c:=0;s:=0;
+    c:=0;
+//  s:=0;
     for i:=1 to m do
 //  begin
 //      max:=-32768;
         for j:=1 to n do
         begin
             write('a[',i,',',j,']:=');readln(a[i,j]);
+            if a[i,j]=0 then inc(c);
 //          if a[i,j]>max then max:=a[i,j];
 //          if a[i,j]=x then inc(c);
         end;
@@ -40,14 +45,16 @@ begin
 //  for i:=1 to m do
 //      for j:=1 to n do
 //          if a[i,j]=x then write('[',i,',',j,']');
-    for i:=1 to m do
-        for j:=1 to n do
-            b[j,i]:=a[i,j];
-    writeln('Ma Tran Chuyen Vi');
-    for i:=1 to n do
-    begin
-        for j:=1 to m do
-            write(b[i,j]:4);
-        writeln;
-    end;
+//  for i:=1 to m do
+//      for j:=1 to n do
+//          b[j,i]:=a[i,j];
+//  writeln('Ma Tran Chuyen Vi');
+//  for i:=1 to n do
+//  begin
+//      for j:=1 to m do
+//          write(b[i,j]:4);
+//      writeln;
+//  end;
+    if c>=m*n/2 then write('Ma Tran Thua');
+    readln;
 end.
