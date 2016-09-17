@@ -43,12 +43,12 @@ begin
     readln;
     for i:=1 to m do
         for j:=1 to n do
-            b[i,j]:=a[j,i];
+            b[j,i]:=a[i,j];
     writeln('Ma Tran Chuyen Vi');
-    for i:=1 to m do
+    for i:=1 to n do
     begin
-        for j:=1 to n do
-            write(a[i,j]:4);
+        for j:=1 to m do
+            write(b[i,j]:4);
         writeln;
     end;
 end.
