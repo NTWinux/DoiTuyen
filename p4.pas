@@ -5,9 +5,12 @@ uses crt;
 // a/ Tính Tổng các phần tử lớn nhất mỗi hàng
 // b/ Đếm so lần x xuất hiện trong mảng và vị trí của chúng
 
+// Bài 2
+// Tìm ma trận chuyển vị
+
 type Mang2Chieu=array[1..10,1..10]of integer;
 var
-    a:Mang2Chieu;
+    a,b:Mang2Chieu;
     m,n,i,j,s,max,x,c:integer;
 begin
     k:=-32768;
@@ -38,4 +41,13 @@ begin
         for j:=1 to n do
             if a[i,j]=x then write('[',i,',',j,']');
     readln;
+    for i:=1 to m do
+        for j:=1 to n do
+            b[i,j]:=a[j,i];
+    writeln('Ma Tran Chuyen Vi');
+        begin
+        for j:=1 to n do
+            write(b[i,j]:4);
+        writeln;
+    end;
 end.
