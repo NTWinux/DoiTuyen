@@ -1,6 +1,6 @@
 uses crt;
 // Mang 2 Chieu
-type Mang2Chieu:array[1..10,1..10]of integer;
+type Mang2Chieu=array[1..10,1..10]of integer;
 var
     a:Mang2Chieu;
     m,n,i,j:integer;
