@@ -13,7 +13,7 @@ var
     a,b:Mang2Chieu;
     m,n,i,j,s,max,x,c:integer;
 begin
-    k:=-32768;
+    max:=-32768;
     write('Dong: ');readln(m);
     write('Cot: ');readln(n);
     write('x:=');readln(x);
@@ -45,9 +45,10 @@ begin
         for j:=1 to n do
             b[i,j]:=a[j,i];
     writeln('Ma Tran Chuyen Vi');
-        begin
+    for i:=1 to m do
+    begin
         for j:=1 to n do
-            write(b[i,j]:4);
+            write(a[i,j]:4);
         writeln;
     end;
 end.
