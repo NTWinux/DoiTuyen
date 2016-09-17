@@ -1,5 +1,10 @@
 uses crt;
-// Mang 2 Chieu
+// Mảng 2 Chiều
+
+// Bài 1
+// a/ Tính Tổng các phần tử lớn nhất mỗi hàng
+// b/ Đếm so lần x xuất hiện trong mảng và vị trí của chúng
+
 type Mang2Chieu=array[1..10,1..10]of integer;
 var
     a:Mang2Chieu;
@@ -27,7 +32,10 @@ begin
             write(a[i,j]:4);
         writeln;
     end;
-    writeln('Tong cac phan tu lon nhat cua moi dong:',s);
-    writeln('So lan xuat hien x trong mang:',c);
+    writeln('a/ Tong cac phan tu lon nhat cua moi dong:',s);
+    writeln('b/ So lan xuat hien x trong mang:',c);
+    for i:=1 to m do
+        for j:=1 to n do
+            if a[i,j]=x then write('[',i,',',j,']');
     readln;
 end.
