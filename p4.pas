@@ -112,26 +112,23 @@ begin
 end.
 }
 // Bài 6
-{
+
 var 
     a:Mang2Chieu;
-    i,j,m,n:integer;
+    i,j,n:integer;
     bool:boolean;
 begin
-    write('Dong: ');readln(m);
-    write('Cot: ');readln(n);
-    for i:=1 to m do
+    write('Cot & Hang: ');readln(n);
+    for i:=1 to n do
         for j:=1 to n do
         begin
             write('a[',i,',',j,']:=');readln(a[i,j]);
         end;
     Bool:=True;
-    for i:=2 to m do
-        for j:=n-i+2 to n do
-        begin
+    for i:=2 to n do
+        for j:=0 to i-2 do
             if a[i,j]<>0 then bool:=False;
-        end;
-    for i:=1 to m do
+    for i:=1 to n do
     begin
         for j:=1 to n do
             write(a[i,j]:4);
@@ -141,7 +138,7 @@ begin
         else write('Khong phai ma tran tam giac');
     readln;
 end.
-}
+{
 //Bai 7
 var 
     a:Mang2Chieu;
@@ -179,3 +176,4 @@ begin
     end;
     readln;
 end.
+}
